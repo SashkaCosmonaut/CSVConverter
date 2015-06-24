@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataConversion
 {
-    abstract public class Converter
+    public class XLSXConverter : Converter
     {
-        public bool Import(String path)
+        public override bool Export(String path)
         {
             return false;
         }
-
-        abstract public bool Export(String path);
     }
 }
