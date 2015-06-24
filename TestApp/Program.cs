@@ -13,8 +13,9 @@ namespace TestApp
         static void Main(string[] args)
         {
             var converter = new DataConversion.XLSXConverter();
-            Debug.Assert(converter.Import("test_data.csv"), "Can't import data!");
-            Debug.Assert(converter.Export("output_test_data.xlsx"), "Can't export data!");
+            converter.Import(@"C:\Users\nsv\Documents\repo\CSVConverter\CSVConverter\test_data.csv");
+            //Debug.Assert(converter.Import("test_data.csv"), "Can't import data!");
+            //Debug.Assert(converter.Export("output_test_data.xlsx"), "Can't export data!");
         }
     }
 }
