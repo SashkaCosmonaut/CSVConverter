@@ -14,12 +14,13 @@ namespace DataConversion
 {
     abstract public class Converter
     {
-        private DataTable dataTable;
+        protected DataTable dataTable;
 
         public bool Import(String path)
         {
             try
             {
+                Console.WriteLine("Import...");
                 var timer = new Stopwatch();
                 timer.Start();
 
@@ -28,12 +29,13 @@ namespace DataConversion
                 using (var streamReader = new StreamReader(path))
                 using (var reader = new CsvReader(streamReader))
                 {
+                    reader.ValueSeparator = ';';
                     reader.ReadHeaderRecord();
                     dataTable.Fill(reader);
                 }
 
                 timer.Stop();
-                Console.WriteLine("Csv file contains {0} rows. Elapsed time: {1} ms", dataTable.Rows.Count, timer.Elapsed.Milliseconds);
+                Console.WriteLine("Import complete! Csv file contains {0} rows. Elapsed time: {1} ms", dataTable.Rows.Count, timer.Elapsed.Milliseconds);
                 return true;
             }
             catch
