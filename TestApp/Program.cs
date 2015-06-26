@@ -11,6 +11,10 @@ namespace TestApp
 {
     class Program
     {
+        /// <summary>
+        /// Пример массива данных
+        /// </summary>
+        /// <returns>Массив данных</returns>
         static DataTable GetTestDataTable()
         {
             DataTable table = new DataTable();
@@ -28,6 +32,9 @@ namespace TestApp
             return table;
         }
 
+        /// <summary>
+        /// Пример использования библиотеки
+        /// </summary>
         static void Main(string[] args)
         {
             string path = @"C:\Users\nsv\Documents\repo\CSVConverter\CSVConverter\";
