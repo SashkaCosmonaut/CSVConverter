@@ -7,9 +7,6 @@ using System.Diagnostics;
 using System.Data;
 using DataConversion;
 
-using System.Globalization;
-using System.Threading;
-
 namespace TestApp
 {
     class Program
@@ -35,7 +32,7 @@ namespace TestApp
         {
             string path = @"C:\Users\nsv\Documents\repo\CSVConverter\CSVConverter\";
 
-            ConverterAdapter.convert(GetTestDataTable(), path + "result_en", ConversionFormat.CSV, Localisation.English);
+            ConverterAdapter.convert(GetTestDataTable(), path + "result_en", ConversionFormat.ARFF, Localisation.Russian);
         }
     }
 }
