@@ -102,6 +102,10 @@
       <HintPath>..\packages\Kent.Boogaart.KBCsv.Extensions.Data.3.0.0\lib\net45\Kent.Boogaart.KBCsv.Extensions.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="LumenWorks.Framework.IO, Version=3.8.0.0, Culture=neutral, PublicKeyToken=5ad3ea2f85776344, processorArchitecture=MSIL">
       <HintPath>..\packages\PicNetML.0.0.16\lib\net45\LumenWorks.Framework.IO.dll</HintPath>
       <Private>True</Private>
@@ -125,6 +129,7 @@
   <ItemGroup>
     <Compile Include="ARFFConverter.cs" />
     <Compile Include="Converter.cs" />
+    <Compile Include="ConverterAdaptor.cs" />
     <Compile Include="CSVConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XLSXConverter.cs" />
